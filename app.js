@@ -13,7 +13,13 @@ addForm.addEventListener('submit',e=>{
     e.preventDefault();
     const todo= addForm.add.value.trim();
   if(todo.length){
+   let outPut=0;
+   const timer=setInterval(()=>{
     generateTemplate(todo);
+    if(outPut=todo){
+        clearInterval(timer)
+    }
+   },1000)
     addForm.reset();
   }
 })
