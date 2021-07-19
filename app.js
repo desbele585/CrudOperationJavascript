@@ -10,6 +10,7 @@ const generateTemplate= (todo)=>{
     `
     list.innerHTML +=html;
 }
+// add todos
 addForm.addEventListener('submit',e=>{
     e.preventDefault();
     const todo= addForm.add.value.trim();
@@ -31,7 +32,7 @@ list.addEventListener('click',e=>{
         
     }
 })
-// search
+// search todos
 const filterTodos= (term)=>{
     Array.from(list.children)
     .filter((todo)=>!todo.textContent.toLocaleLowerCase().includes(term))
